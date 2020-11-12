@@ -1,4 +1,7 @@
 <button class="btn btn-primary" (click)="load10Movies()">Carica 10 film</button>
+<button class="btn btn-primary" (click)="loadHorror()">Carica Horror</button>
+<button class="btn btn-primary" (click)="loadComedy()">Carica Comedy</button>
+
 <div class="card-columns">
   <div *ngFor="let movie of results" class="card">
     <img class="card-img-top" [src]="photoURL(movie.poster)" alt="Movie poster">
@@ -8,3 +11,4 @@
     </div>
   </div>
 </div>
+
