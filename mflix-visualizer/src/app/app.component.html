@@ -1,6 +1,44 @@
-<button class="btn btn-primary" (click)="load10Movies()">Carica 10 film</button>
-<button class="btn btn-primary" (click)="loadHorror()">Carica Horror</button>
-<button class="btn btn-primary" (click)="loadComedy()">Carica Comedy</button>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Movies</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <form class="jumbotron">
+            <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+            <!-- Brand/logo -->
+            <a class="navbar-brand " href="">EXPRESS HTML</a>
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                <a class="nav-link" (click)="load10Movies()">Carica 10 film</a>
+                </li>
+                <li class="nav-item ">
+                <a class="nav-link" (click)="loadHorror()">Film Horror</a>
+                </li>
+                <li class="nav-item ">
+                <a class="nav-link"(click)="loadComedy()">Film Comici</a>
+                </li>
+            </ul>
+            </nav>
+            <br>
+
+
+        </form>
+    </div>
+  </body>
+
+
+
 
 <div class="card-columns">
   <div *ngFor="let movie of results" class="card">
@@ -11,7 +49,7 @@
     <img class="card-img-top" [src]="photoURL(movie.poster)" alt="Movie poster">
     <div class="card-body text-center">
     <h4 class="card-title">{{movie.title}}</h4>
-    <p class="card-text">S{{movie.fullplot}</p>
+    <p class="card-text">{{movie.fullplot}}</p>
     </div>
   </div>
   </div>
