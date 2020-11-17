@@ -16,17 +16,17 @@ export class AppComponent {
 
   load10Movies()
   {
-    this.obs = this.http.get("https://3000-a21e7d27-58bb-4a0b-a0e2-1c4bcfae580b.ws-eu01.gitpod.io/movies/list/10");
+    this.obs = this.http.get("https://3000-b65fd7b8-4f11-414b-b02c-90b268c770ab.ws-eu01.gitpod.io/movies/list/10");
     this.obs.subscribe(this.getData);
   }
   loadHorror()
   {
-    this.obs = this.http.get("https://3000-a21e7d27-58bb-4a0b-a0e2-1c4bcfae580b.ws-eu01.gitpod.io/movies/movie_from_genres/Horror");
+    this.obs = this.http.get("https://3000-b65fd7b8-4f11-414b-b02c-90b268c770ab.ws-eu01.gitpod.io/movies/movie_from_genres/Horror");
     this.obs.subscribe(this.getData);
   }
   loadComedy()
   {
-    this.obs = this.http.get("https://3000-a21e7d27-58bb-4a0b-a0e2-1c4bcfae580b.ws-eu01.gitpod.io/movies/movie_from_genres/Comedy");
+    this.obs = this.http.get("https://3000-b65fd7b8-4f11-414b-b02c-90b268c770ab.ws-eu01.gitpod.io/movies/movie_from_genres/Comedy");
     this.obs.subscribe(this.getData);
   }
   getData = (data) => {
@@ -35,6 +35,9 @@ export class AppComponent {
 
   photoURL(urltoSanitize) {
     console.log(urltoSanitize);
+    if((urltoSanitize)!=undefined)
     return this.sanitizer.bypassSecurityTrustUrl(urltoSanitize);
+    else
+    return false
 }
 }
